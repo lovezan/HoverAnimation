@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  background-color: black;
+}
+.center {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  text-align: center;
+}
+.outer {
+    position: relative;
+ background: rgb(255, 249, 249);
+  /* background: linear-gradient(#e82646,#4e9d09,#ca1de1, #004d7a, #008793, #00bf72, #a8eb12); */
+  /* background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0); */
+  margin: 0 50px;
+}
+.button {
+  height: 70px;
+  width: 220px;
+  border-radius: 50px;
+}
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.outer button, .outer span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+}
+.outer button{
+ background: #111;
+ color: #f2f2f2;
+ outline: none;
+ z-index: 9 ;
+ border: none;
+ font-size: 20px;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ cursor: pointer;
+}
+
+.button button{
+height: 60px;
+width: 210px;
+border-radius: 50px;
+}
+.circle button{
+height: 180px;
+width: 180px;
+border-radius: 50%;
+}
+.outer span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+.button span{
+  border-radius: 50px;
+}
+.circle span{
+  border-radius: 50%;
+}
+.outer:hover span:nth-child(1){
+   filter: blur(7px);
+}
+ .outer:hover span:nth-child(2){
+    filter: blur(14px);
+ }
+ .outer:hover{
+    animation: rotate 1.2s linear infinite;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+
+ }
+ 
+ @keyframes rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        
+        filter: hue-rotate(360deg);
+    }
+ }
